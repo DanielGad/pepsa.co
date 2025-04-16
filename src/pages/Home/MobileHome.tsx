@@ -35,7 +35,7 @@ const MobileHome: React.FC = () => {
 
       {/* Buy with Pepsa */}
       <div className='flex flex-row gap-4 items-center justify-end bg-[#a00000] rounded-2xl text-white pl-5 pt-5 w-[80%] mx-auto'>
-        <div className='font-bold text-4xl mr-4 max-w-xs'>Buy with Pepsa</div>
+        <div className='font-bold text-3xl mr-4 max-w-xs'>Buy with Pepsa</div>
         <img src={BuyImg} alt="Buy with Pepsa" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
       </div>
       <div className='flex flex-col gap-4 items-start bg-[#f3f7fa] rounded-2xl text-black font-medium mt-4 pl-5 pt-5 w-[80%] mx-auto mb-5'>
@@ -46,7 +46,7 @@ const MobileHome: React.FC = () => {
 
       {/* Sell with Plug */}
       <div className='flex flex-row gap-4 items-center justify-end bg-[#fbe7ea] rounded-2xl text-[#a00000] pl-5 pt-5 w-[80%] mx-auto'>
-        <div className='font-bold text-4xl mr-4 max-w-xs'>Sell with Plug</div>
+        <div className='font-bold text-3xl mr-4 max-w-xs'>Sell with Plug</div>
         <img src={SellImg} alt="Buy with Pepsa" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
       </div>
       <div className='flex flex-col gap-4 items-start bg-[#f3f7fa] rounded-2xl text-black font-medium mt-4 pl-5 pt-5 w-[80%] mx-auto mb-5'>
@@ -57,7 +57,7 @@ const MobileHome: React.FC = () => {
 
       {/* Dispatch */}
       <div className='flex flex-row gap-4 items-center justify-end bg-[#e2defe] rounded-2xl text-[#a00000] pl-5 pt-5 w-[80%] mx-auto'>
-        <div className='font-bold text-4xl mr-4 max-w-xs'>Pepsa Dispatch</div>
+        <div className='font-bold text-3xl mr-4 max-w-xs'>Pepsa Dispatch</div>
         <img src={Dispatch} alt="Buy with Pepsa" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
       </div>
       <div className='flex flex-col gap-4 items-start bg-[#f3f7fa] rounded-2xl text-black font-medium mt-4 pl-5 pt-5 w-[80%] mx-auto mb-15'>

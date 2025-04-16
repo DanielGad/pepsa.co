@@ -10,11 +10,10 @@ const MobileHeader = () => {
   return (
     <div className="text-white mt-[-80px] header-container">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop={true}
         pagination={{ clickable: true }}
-        navigation={true}
         spaceBetween={20}
         className="mobile-header-swiper"
       >
