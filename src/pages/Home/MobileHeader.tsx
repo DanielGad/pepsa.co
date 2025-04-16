@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 import Image from '../../assets/images/Image_01.png';
 import Image2 from '../../assets/images/Image_02.png';
@@ -56,7 +56,7 @@ const MobileHeader = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-full inline-block px-4 py-1 mb-4">
                 <p className="text-sm font-medium">{slide.subtitle}</p>
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug sm:leading-tight mb-4 text-[#e5edcd]">
+              <h1 className=" text-2xl  font-bold leading-snug sm:leading-tight mb-4 text-[#e5edcd]">
                 {slide.title.split('<br />').map((line, i) => (
                   <span key={i}>
                     {line}
