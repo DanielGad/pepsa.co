@@ -1,11 +1,44 @@
 @import "tailwindcss";
 @import 'swiper/swiper-bundle.css';
 
-:root {
-  --breakpoint-initial: 0;
-  --breakpoint-tablet: 56rem;
-  --breakpoint-laptop: 64rem; 
-  --breakpoint-desktop: 80rem;
+.slide-up {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.slide-up.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.slide-down.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slide-in.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slide-out.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 body {

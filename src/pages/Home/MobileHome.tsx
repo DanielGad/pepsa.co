@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MobileHeader from './MobileHeader'
 import BuyImg from '../../assets/images/Group_Pepsa.png';
 import SellImg from '../../assets/images/Group_Cart.png';
@@ -24,12 +24,22 @@ const MobileHome: React.FC = () => {
     { src: Partner3, alt: "RISA Logo" },
     { src: Partner4, alt: "UK AID Logo" },
   ];
+
+    // State for animating main headline & sections
+    const [headlineVisible, setHeadlineVisible] = useState(false);
+    // const [sectionsVisible, setSectionsVisible] = useState(false);
+  
+    useEffect(() => {
+      // Animate headline and then sections after a short delay
+      setHeadlineVisible(true);
+      // setTimeout(() => setSectionsVisible(true), 200);
+    }, []);
   
   return (
     <div>
       <MobileHeader />
 
-      <section className="py-12 sm:py-14 md:py-18 lg:py-14 text-3xl w-[80%] text-center mx-auto font-bold tracking-tight leading-snug">
+      <section className={`py-12 sm:py-14 md:py-18 lg:py-14 text-3xl w-[80%] text-center mx-auto font-bold tracking-tight leading-snug slide-in${headlineVisible ? ' visible' : ''}`}>
         Custom Solutions for Sale, Purchase and On-demand Delivery 
       </section>
 

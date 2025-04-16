@@ -18,7 +18,7 @@ const Header = () => {
         modules={[Navigation, Autoplay]}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4000 }}
         loop
         className="max-w-7xl mx-auto"
       >

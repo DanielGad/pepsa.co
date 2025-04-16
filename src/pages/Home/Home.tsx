@@ -74,7 +74,7 @@ const Home = () => {
             {card.text}
           </p>
           <button
-            className={`${card.btnColor} ${card.btnBorder} ${card.btnHover} font-semibold px-4 sm:px-6 py-2 rounded-md transition`}
+            className={`${card.btnColor} ${card.btnBorder} ${card.btnHover} font-semibold px-4 py-2 rounded-md transition`}
           >
             {card.btnText}
           </button>
@@ -83,14 +83,14 @@ const Home = () => {
         {/* Image wrapper aligned to far right & sticking out */}
         <div
           className={`relative flex-shrink-0 ${
-            card.title === "Pepsa Dispatch" ? "-mt-20" : ""
+            card.title === "Pepsa Dispatch" ? "absolute top-15 right-[-40px] -mt-20" : ""
           }`}
           style={{ alignSelf: "flex-end" }}
         >
           <img
             src={card.img}
             alt={card.alt}
-            className="w-[220px] sm:w-[280px] md:w-[350px] lg:w-[420px] object-contain"
+            className="w-[420px] object-contain"
           />
         </div>
       </div>
