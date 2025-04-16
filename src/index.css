@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import 'swiper/swiper-bundle.css';
+
+:root {
+  --breakpoint-initial: 0;
+  --breakpoint-tablet: 56rem;
+  --breakpoint-laptop: 64rem; 
+  --breakpoint-desktop: 80rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-container {
+  position: relative;
+  background-color: rgb(165,22,27); 
+  padding-top: 150px;
+  overflow: hidden;
+}
+
+.header-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/images/Rectangle_40.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 1; 
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header-container > * {
+  position: relative;
+  z-index: 1;
+}
+

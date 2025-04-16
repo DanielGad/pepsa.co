@@ -1,0 +1,23 @@
+.home-header-container {
+  position: relative;
+  min-height: 480px;
+  background-image:
+    linear-gradient(rgba(165,22,27)),
+    url('/Rectangle_40.png'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Optional: add a subtle border or shadow */
+}
+
+.home-header-container > * {
+  position: relative;
+  z-index: 10;
+}
+.home-header-container::before {
+  content: "";
+  /* Already handled by background-image, but you can use this for extra overlays if needed */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
