@@ -27,9 +27,9 @@ const MobileHeader = () => {
             btn2: "Send Item"
           },
           {
-            title: "Buy and get fast delivery, access payment solution and pay bills",
-            subtitle: "Get 20% off Your First Order",
-            text: "Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.",
+            title: "Operate a Logistics Business with Pepsa Dispatch",
+            subtitle: "Delivery Business Made Easy",
+            text: "Start a last-mile logistics business. Onboard riders, get delivery orders, and track drivers activities. Increase earnings with our gigs and simultaneously fulfil your orders.",
             img: Image2,
             btn1: "Register Now",
             btn2: <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10" />
@@ -43,9 +43,9 @@ const MobileHeader = () => {
             btn2: "Learn About Plug"
           },
           {
-            title: "Operate a Logistics Business with Pepsa Dispatch",
-            subtitle: "Delivery Business Made Easy",
-            text: "Start a last-mile logistics business. Onboard riders, get delivery orders, and track drivers activities. Increase earnings with our gigs and simultaneously fulfil your orders.",
+            title: "Buy and get fast delivery, access payment solution and pay bills",
+            subtitle: "Get 20% off Your First Order",
+            text: "Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.",
             img: Image4,
             btn1: "Shop Now",
             btn2: "Send Item"
