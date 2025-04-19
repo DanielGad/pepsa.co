@@ -1,4 +1,4 @@
-
+// import { Context } from '../../components/Context';
 import Header from "./Header";
 import BuyImg from '../../assets/images/Group_Pepsa.png';
 import SellImg from '../../assets/images/Group_Cart.png';
@@ -12,14 +12,28 @@ import Partner2 from '../../assets/images/I2M_LOGO.png';
 import Partner3 from '../../assets/images/RISA_Logo.png';
 import Partner4 from '../../assets/images/UK_AID_LOGO.png';
 import Footer from "./Footer";
+// import { useContext } from 'react';
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  // const { isVisible } = useContext(Context);
+
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 300); // delay before showing
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white text-black py-12 sm:py-14 md:py-18 lg:py-14 text-3xl sm:text-4xl md:text-5xl lg:text-5xl w-[95%] sm:w-[90%] md:w-[80%] text-center mx-auto font-bold tracking-tight leading-snug">
+      <section className={`bg-white text-black py-12 sm:py-14 md:py-18 lg:py-14 text-3xl sm:text-4xl md:text-5xl lg:text-5xl w-[95%] sm:w-[90%] md:w-[80%] text-center mx-auto font-bold tracking-tight leading-snug slide-in left-slide-in ${visible ? "visible" : ""}`}>
+      
         Custom Solutions for Sale, Purchase and <br /> On-demand Delivery 
       </section>
 
@@ -67,14 +81,14 @@ const Home = () => {
 >
   {/* Text Section */}
   <div className="max-w-[90vw] sm:max-w-md py-3 sm:py-6 flex-1">
-    <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 max-w-[400px] md:max-w-[500px]">
+    <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 max-w-[400px] md:max-w-[500px] slide-in left-slide-in ${visible ? "visible" : ""}`}>
             {card.title}
           </h2>
-          <p className="mb-4 sm:mb-6 md:mb-8 leading-relaxed text-base sm:text-lg">
+          <p className={`mb-4 sm:mb-6 md:mb-8 leading-relaxed text-base sm:text-lg slide-in right-slide-in ${visible ? "visible" : ""}`}>
             {card.text}
           </p>
           <button
-            className={`${card.btnColor} ${card.btnBorder} ${card.btnHover} font-semibold px-4 py-2 rounded-md transition`}
+            className={`${card.btnColor} ${card.btnBorder} ${card.btnHover} font-semibold px-4 py-2 rounded-md transform transition-transform duration-900 ease-in-out hover:scale-110 hover:brightness-110 cursor-pointer`}
           >
             {card.btnText}
           </button>
@@ -90,7 +104,8 @@ const Home = () => {
           <img
             src={card.img}
             alt={card.alt}
-            className="w-[420px] object-contain"
+            className="w-[420px] object-contain transition-transform duration-900 ease-in-out transform hover:scale-90"
+            
           />
         </div>
       </div>
@@ -102,11 +117,11 @@ const Home = () => {
       <section className="bg-[#a50707] text-white px-2 sm:px-6 md:px-20 py-10 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
           <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-            <div className="relative w-[180px] sm:w-[260px] md:w-[350px] h-[180px] sm:h-[260px] md:h-[350px]">
+            <div className="relative w-[180px] sm:w-[260px] md:w-[350px] h-[180px] sm:h-[260px] md:h-[350px] transition-transform duration-900 ease-in-out transform hover:scale-90">
               <img
                 src={Frame}
                 alt="About visual"
-                className="w-full h-full object-cover rounded-lg shadow-lg relative z-10"
+                className="w-full h-full object-cover rounded-lg shadow-lg relative z-10 "
               />
               <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-black opacity-20 z-20 pointer-events-none" />
             </div>

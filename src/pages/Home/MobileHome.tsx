@@ -24,16 +24,6 @@ const MobileHome: React.FC = () => {
     { src: Partner3, alt: "RISA Logo" },
     { src: Partner4, alt: "UK AID Logo" },
   ];
-
-    // // State for animating main headline & sections
-    // const [headlineVisible, setHeadlineVisible] = useState(false);
-    // // const [sectionsVisible, setSectionsVisible] = useState(false);
-  
-    // useEffect(() => {
-    //   // Animate headline and then sections after a short delay
-    //   setHeadlineVisible(true);
-    //   // setTimeout(() => setSectionsVisible(true), 200);
-    // }, []);
   
   return (
     <div>
