@@ -155,7 +155,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-center items-center gap-6 sm:gap-10">
           {/* Left Text */}
           <div className="w-full md:w-auto md:max-w-md text-center md:text-left flex-1 mb-6 md:mb-0">
-            <img src={PepsaLogo} alt="Pepsa Logo" className="w-1/2 mx-auto md:mx-0 mb-2 sm:mb-4 fade-in-up" />
+            <img src={PepsaLogo} alt="Pepsa Logo" className="w-70 mx-auto md:mx-0 mb-2 fade-in-up" />
             <p className="text-[#a50707] mb-2 sm:mb-6 font-bold text-lg sm:text-2xl">
               Everyday Needs Delivered to <br />your doorstep
             </p>
@@ -170,22 +170,22 @@ const Home = () => {
           </div>
           {/* Right Circle Image */}
           <div className="w-full md:w-auto md:max-w-md flex justify-center flex-1">
-            <div className="bg-[#a50707] rounded-full flex items-center justify-center w-28 h-28 sm:w-52 sm:h-52 md:w-64 md:h-64">
+            <div className="bg-[#a50707] rounded-full flex items-center justify-center w-78 h-78 ">
               <img
                 src={MobileApp}
                 alt="Pepsa app mockup"
-                className="w-20 sm:w-36 md:w-52 h-auto object-contain zoom-in"
+                className="w-78  h-auto object-contain zoom-in"
               />
             </div>
           </div>
         </div>
 
         {/* Partner Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 pt-8 sm:pt-10">
-          <img src={Partner1} alt="Partner GSE" className="h-10 sm:h-16 w-auto object-contain zoom-in" />
-          <img src={Partner2} alt="Partner I2M" className="h-10 sm:h-16 w-auto object-contain zoom-in" />
-          <img src={Partner3} alt="Partner RISA" className="h-10 sm:h-16 w-auto object-contain zoom-in" />
-          <img src={Partner4} alt="Partner UKAID" className="h-10 sm:h-16 w-auto object-contain zoom-in" />
+        <div className="flex flex-wrap justify-center items-center gap-6 mt-10 ">
+          <img src={Partner1} alt="Partner GSE" className="h-25 w-auto object-contain zoom-in" />
+          <img src={Partner2} alt="Partner I2M" className="h-25 w-auto object-contain zoom-in" />
+          <img src={Partner3} alt="Partner RISA" className="h-25 w-auto object-contain zoom-in" />
+          <img src={Partner4} alt="Partner UKAID" className="h-25 w-auto object-contain zoom-in" />
         </div>
       </section>
       
