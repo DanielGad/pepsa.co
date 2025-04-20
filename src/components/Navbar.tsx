@@ -28,7 +28,7 @@ const dropdownMenus: DropdownItem[] = [
     label: 'Products',
     items: [
       { label: 'Pepsa Store', link: '/store' },
-      { label: 'Pepsa Plog', link: '/plug' },
+      { label: 'Pepsa Plug', link: '/plug' },
       { label: 'Pepsa Dispatch', link: '/dispatch' },
     ],
   },
@@ -54,7 +54,7 @@ const Navbar = () => {
     menu.items.some(item => item.link === location.pathname)
   );
 
-  // ---- NEW: Delayed Dropdown Handlers ----
+  //Delayed Dropdown Handlers
   const handleMouseEnterDropdown = (idx: number) => {
     if (closeDropdownTimer.current) {
       clearTimeout(closeDropdownTimer.current);
@@ -67,11 +67,9 @@ const Navbar = () => {
     if (closeDropdownTimer.current) clearTimeout(closeDropdownTimer.current);
     closeDropdownTimer.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 160); // adjust as needed (120-200ms typical)
+    }, 160);
   };
-  // ---- END NEW ----
 
-  // Keyboard: handle open/close for dropdown trigger
   const handleDropdownKeyDown = (
     event: React.KeyboardEvent<HTMLDivElement>,
     idx: number,
@@ -107,9 +105,10 @@ const Navbar = () => {
         <Link to="/" className="cursor-pointer flex items-center shrink-0" aria-label="Pepsa Home">
           <img src={Pepsa_Logo} alt="Pepsa Logo" className="w-[90px] md:w-[120px]" />
         </Link>
+
         {/* Hamburger Icon */}
         <button
-          className="lg:hidden flex items-center text-2xl px-2 text-[rgb(165,22,27)] focus:outline-none"
+          className="lg:hidden flex items-center text-2xl px-2 text-[rgb(165,22,27)] focus:outline-none cursor-pointer"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           onClick={toggleMobileMenu}
         >
@@ -217,7 +216,7 @@ const Navbar = () => {
             className="lg:hidden w-full bg-white shadow-lg absolute top-full left-0 z-40 overflow-hidden"
           >
             <ul className="flex flex-col px-6 py-6 gap-4 text-lg">
-              <li className={`cursor-pointer py-2 text-[rgb(63,40,59)] ${
+              <li className={`cursor-pointer py-2 text-[rgb(63,40,59)] font-bold ${
                 location.pathname === '/' ? 'text-[rgb(165,22,27)]' : 'hover:text-[rgb(165,22,27)]'
               }`}>
                 <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
@@ -265,7 +264,7 @@ const Navbar = () => {
                   </AnimatePresence>
                 </li>
               ))}
-              <li className={`cursor-pointer py-2 text-[rgb(63,40,59)] ${
+              <li className={`cursor-pointer py-2 text-[rgb(63,40,59)] font-bold ${
                 location.pathname === '/contact' ? 'text-[rgb(165,22,27)]' : 'hover:text-[rgb(165,22,27)]'
               }`}>
                 <Link to="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link>
