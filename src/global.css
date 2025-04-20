@@ -1,0 +1,134 @@
+@layer utilities {
+  /* Existing ones */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Flip In */
+  .flip-in {
+    opacity: 0;
+    transform: rotateY(90deg);
+    transform-origin: center;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  .flip-in.show {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  /* Zoom In */
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-in-out;
+  }
+  .zoom-in.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Blur In */
+  .blur-in {
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 1s ease-out, filter 1s ease-out;
+  }
+  .blur-in.show {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  /* Rotate In */
+  .rotate-in {
+    opacity: 0;
+    transform: rotate(-180deg);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+  .rotate-in.show {
+    opacity: 1;
+    transform: rotate(0);
+  }
+
+  /* Scale Up */
+  .scale-up {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  }
+  .scale-up.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Bounce In */
+  .bounce-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: bounceIn 0.8s forwards;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+    80% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide In Bottom */
+  .slide-in-bottom {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  .slide-in-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Drop In */
+  .drop-in {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+    transition: all 0.6s ease-out;
+  }
+  .drop-in.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

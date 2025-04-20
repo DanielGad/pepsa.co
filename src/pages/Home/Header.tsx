@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
@@ -25,7 +24,7 @@ const Header = () => {
         {/* Slide 1 */}
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="text-center md:text-left md:ml-14">
+            <div className="text-center md:text-left md:ml-14 fade-in-up">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 Everyday Needs and<br /> Delivery to Your Doorstep
               </h1>
@@ -33,14 +32,14 @@ const Header = () => {
                 The Marketplace for shopping and on-demand delivery services within your city!
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
-                <button className="bg-white text-[#C8102E] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#C8102E] hover:text-white hover:border-[white] transition">
+                <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] border hover:border-1 hover:text-white hover:border-white transition">
                   Shop Now
                 </button>
-                <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#C8102E] transition cursor-pointer ">
+                <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#a00000]  transition cursor-pointer ">
                   Send Item
                 </button>
               </div>
-              <div className="text-sm text-center md:text-left">
+              <div className="text-sm text-center md:text-left fade-in-up">
                 <p className="text-cyan-300 text-lg sm:text-[20px] font-semibold mb-1">Trusted by Leading Brands</p>
                 <div className="flex flex-wrap justify-center md:justify-start items-center mt-1 gap-2 sm:gap-4">
                   <img src={trusted1} alt="trusted 1" className="h-8 sm:h-12 md:h-10 w-auto" />
@@ -50,7 +49,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start fade-in-up">
               <div className="relative">
                 <div className="rounded-full p-1 sm:p-2 relative z-10 md:ml-10">
                   <img
@@ -69,7 +68,7 @@ const Header = () => {
         {/* Slide 2 */}
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="text-center md:text-left md:ml-14">
+            <div className="text-center md:text-left md:ml-14 fade-in-left">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Delivery Business Made Easy</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
                 Operate a logistics business <br /> with Pepsa Dispatch
@@ -78,7 +77,7 @@ const Header = () => {
                 Pepsa Dispatch connects logistics vendors to thousands of daily delivery orders, ensuring steady income, rider tracking, and flexible revenue sharing across cities.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
-                <button className="bg-white text-[#C8102E] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#C8102E] hover:text-white  transition">
+                <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white border hover:border-1  transition">
                   Register Now
                 </button>
                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -86,7 +85,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start fade-in-left">
               <div className="relative">
                 <div className="rounded-full p-1 sm:p-2 relative z-10 md:ml-10">
                   <img
@@ -105,7 +104,7 @@ const Header = () => {
         {/* Slide 3 */}
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="text-center md:text-left md:ml-14">
+            <div className="text-center md:text-left md:ml-14 fade-in-right">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Best Delivery Tools for Vendors</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
                 Unlock your business growth<br /> with our Plug All-in-One tool
@@ -114,15 +113,15 @@ const Header = () => {
                 Digitise your business with our management tool, payment system, quick access to customers, and fast delivery on Plug.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
-                <button className="bg-white text-[#C8102E] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#C8102E] hover:text-white hover:border-[white]  transition">
+                <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white hover:border-[white] border hover:border-1 transition">
                   Plug-in Now
                 </button>
-                <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#C8102E] transition cursor-pointer ">
+                <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#a00000] transition cursor-pointer ">
                   Learn About Plug
                 </button>
               </div>
             </div>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start fade-in-right">
               <div className="relative">
                 <div className="rounded-full p-1 sm:p-2 relative z-10 md:ml-10">
                   <img
@@ -141,7 +140,7 @@ const Header = () => {
         {/* Slide 4 */}
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="text-center md:text-left md:ml-14">
+            <div className="text-center md:text-left md:ml-14 fade-in-bottom">
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
                 Buy and get fastdelivery,<br /> access payment solution <br /> and pay bills
               </h1>
@@ -149,12 +148,12 @@ const Header = () => {
                 Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
-                <button className="bg-white text-[#C8102E] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#C8102E] hover:text-white hover:border-[white]  transition">
+                <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white hover:border-[white] border hover:border-1 transition">
                   Get Started
                 </button>
               </div>
             </div>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start fade-in-bottom">
               <div className="relative">
                 <div className="rounded-full p-1 sm:p-2 relative z-10 md:ml-10">
                   <img

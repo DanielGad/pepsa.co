@@ -1,4 +1,3 @@
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import Pepsa_Logo from '../assets/images/pepsa_logo_red.png';
@@ -46,6 +45,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileMenuDropdown, setMobileMenuDropdown] = useState<number | null>(null);
+  const closeDropdownTimer = useRef<NodeJS.Timeout | null>(null);
 
   const dropdownRefs = useRef<(HTMLLIElement | null)[]>([]);
   const location = useLocation();
@@ -54,28 +54,39 @@ const Navbar = () => {
     menu.items.some(item => item.link === location.pathname)
   );
 
-  // Keyboard navigation handlers (desktop only)
-  const handleKeyDown = (e: React.KeyboardEvent, idx: number) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      setOpenDropdown(openDropdown === idx ? null : idx);
-    } else if (e.key === 'ArrowRight') {
-      const nextIdx = (idx + 1) % dropdownMenus.length;
-      dropdownRefs.current[nextIdx]?.focus();
-    } else if (e.key === 'ArrowLeft') {
-      const prevIdx = (idx - 1 + dropdownMenus.length) % dropdownMenus.length;
-      dropdownRefs.current[prevIdx]?.focus();
-    } else if (e.key === 'Escape') {
-      setOpenDropdown(null);
+  // ---- NEW: Delayed Dropdown Handlers ----
+  const handleMouseEnterDropdown = (idx: number) => {
+    if (closeDropdownTimer.current) {
+      clearTimeout(closeDropdownTimer.current);
+      closeDropdownTimer.current = null;
     }
+    setOpenDropdown(idx);
   };
 
-  // Blur/focus logic for accessibility
-  let blurTimeout: NodeJS.Timeout;
-  const handleBlur = () => {
-    blurTimeout = setTimeout(() => setOpenDropdown(null), 100);
+  const handleMouseLeaveDropdown = () => {
+    if (closeDropdownTimer.current) clearTimeout(closeDropdownTimer.current);
+    closeDropdownTimer.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 160); // adjust as needed (120-200ms typical)
   };
-  const handleFocus = () => {
-    clearTimeout(blurTimeout);
+  // ---- END NEW ----
+
+  // Keyboard: handle open/close for dropdown trigger
+  const handleDropdownKeyDown = (
+    event: React.KeyboardEvent<HTMLDivElement>,
+    idx: number,
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      setOpenDropdown(openDropdown === idx ? null : idx);
+      event.preventDefault();
+    }
+    if (event.key === 'ArrowDown') {
+      setOpenDropdown(idx);
+      event.preventDefault();
+    }
+    if (event.key === 'Escape') {
+      setOpenDropdown(null);
+    }
   };
 
   // Hamburger click handler
@@ -121,12 +132,9 @@ const Navbar = () => {
                 key={menu.label}
                 className="relative text-[16px]"
                 ref={el => { dropdownRefs.current[idx] = el }}
-                tabIndex={0}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                onKeyDown={e => handleKeyDown(e, idx)}
-                onMouseEnter={() => setOpenDropdown(idx)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                tabIndex={-1}
+                onMouseEnter={() => handleMouseEnterDropdown(idx)}
+                onMouseLeave={handleMouseLeaveDropdown}
               >
                 <div
                   onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
@@ -137,9 +145,11 @@ const Navbar = () => {
                         : 'text-[rgb(63,40,59)] hover:text-[rgb(165,22,27)]'
                     }
                   `}
-                  aria-haspopup="true"
+                  aria-haspopup="menu"
                   aria-expanded={openDropdown === idx}
-                  tabIndex={-1}
+                  tabIndex={0}
+                  onKeyDown={e => handleDropdownKeyDown(e, idx)}
+                  role="button"
                 >
                   <span>{menu.label}</span>
                   <i className="fas fa-chevron-down text-[16px] ml-1"></i>
@@ -153,9 +163,10 @@ const Navbar = () => {
                       animate="visible"
                       exit="exit"
                       variants={dropdownVariants}
-                      className={`absolute left-0 top-full z-20 w-[200px] space-y-4 text-[16px] bg-white p-5 pl-7 rounded-lg shadow-xl mt-4 ${
-                        openDropdown === idx ? 'pointer-events-auto' : 'pointer-events-none'
-                      }`}
+                      className="absolute left-0 top-full z-20 w-[200px] space-y-4 text-[16px] bg-white p-5 pl-7 rounded-lg shadow-xl mt-4 pointer-events-auto"
+                      role="menu"
+                      onMouseEnter={() => handleMouseEnterDropdown(idx)}
+                      onMouseLeave={handleMouseLeaveDropdown}
                     >
                       {menu.items.map(item => (
                         <li
@@ -164,13 +175,10 @@ const Navbar = () => {
                             location.pathname === item.link ? 'text-[rgb(165,22,27)]' : ''
                           }`}
                           onClick={() => setOpenDropdown(null)}
-                          tabIndex={0}
+                          tabIndex={-1}
+                          role="menuitem"
                         >
-                          <Link
-                            to={item.link}
-                            className="block w-full text-inherit"
-                            tabIndex={0}
-                          >
+                          <Link to={item.link} className="block w-full text-inherit">
                             {item.label}
                           </Link>
                         </li>
