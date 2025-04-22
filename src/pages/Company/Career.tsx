@@ -21,11 +21,21 @@ const Career = () => {
         <h2 className='text-4xl font-bold mt-5 fade-in-left'>Join Our Team in Building Commerce Ecosystem</h2>
         <p className='text-[16px] mt-5 mb-5 w-[80%] mx-auto fade-in-right'>As we build ecosystem for businesses, Join in shaping the future of commerce, one innovation at a time</p>
         <div className='flex justify-center items-center gap-4 rotate-in'>
-          <img src={WhatsApp} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
-          <img src={Facebook} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
-          <img src={Instagram} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
-          <img src={Twitter} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
-          <img src={Linkedin} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          <a href="https://wa.me/2348133475224" target="_blank" aria-label="WhatsApp" className="hover:opacity-55 transition">
+            <img src={WhatsApp} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          </a>
+          <a href="https://www.facebook.com/pepsa.co" target="_blank" aria-label="Facebook" className="hover:opacity-55 transition">
+            <img src={Facebook} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          </a>
+          <a href="https://www.instagram.com/pepsa.co/" target="_blank" aria-label="Instagram" className="hover:opacity-55 transition">
+            <img src={Instagram} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          </a>
+          <a href="https://x.com/pepsaCo_" target="_blank" aria-label="Twitter" className="hover:opacity-55 transition">
+            <img src={Twitter} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          </a>
+          <a href="https://www.linkedin.com/company/pepsaco" target="_blank" aria-label="LinkedIn" className="hover:opacity-55 transition">
+            <img src={Linkedin} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
+          </a>
         </div>
       </div>
 
