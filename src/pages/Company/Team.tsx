@@ -9,7 +9,7 @@ import Member1 from "../../assets/images/Olagoke_Olorunosebi.png";
 import Member2 from "../../assets/images/Blessing_Oyeleke.png";
 import Member3 from "../../assets/images/Mobolaji_Akinola.png";
 import TeamLogo from "../../assets/images/Team.png";
-import JoinUs from "../../assets/images/Join_Us.png";
+import JoinUs from "../../assets/images/Join_us.png";
 import Footer from '../Home/Footer';
 import { useEffect } from 'react';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
