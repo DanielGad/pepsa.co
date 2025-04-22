@@ -1,5 +1,9 @@
 // src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import MobileHome from './pages/Home/MobileHome'
+import ScrollToTop from './lib/ScrollToTop'
+import Contact from './pages/Contact'
 import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
@@ -9,9 +13,6 @@ import Career from './pages/Company/Career'
 // import Store from './pages/Products/Store'
 // import Blogs from './pages/Resources/Blogs'
 // import HowItWorks from './pages/Resources/HowItWorks'
-import { useEffect, useState } from 'react'
-import MobileHome from './pages/Home/MobileHome'
-import ScrollToTop from './lib/ScrollToTop'
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} /> 
         <Route path="/team" element={<Team />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/store" element={<Store />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/how-it-works" element={<HowItWorks />} /> */}

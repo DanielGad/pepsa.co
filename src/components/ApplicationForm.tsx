@@ -204,7 +204,7 @@ export default function ApplicationForm() {
         <div className='flex justify-center'>
         <button
           type="submit"
-          className="bg-[#a00000] text-white py-2 px-30 rounded-md  focus:outline-none focus:ring-2 focus:ring-[#a00000] focus:ring-offset-2 cursor-pointer transition duration-300"
+          className="bg-[#a00000] text-white py-2 px-10 rounded-md  focus:outline-none focus:ring-2 focus:ring-[#a00000] focus:ring-offset-2 cursor-pointer transition duration-300"
         >
           Submit Form
         </button>
