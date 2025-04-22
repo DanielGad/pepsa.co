@@ -6,6 +6,7 @@ import Instagram from '../assets/images/instagram-red.png';
 import Facebook from '../assets/images/facebook-red.png';
 import { useEffect, useState } from "react";
 import { revealOnScroll } from "../lib/ScrollAnimation";
+import Footer from "./Home/Footer";
 
 type ContactFormData = {
   purpose: string;
@@ -189,6 +190,8 @@ const Contact = () => {
           </div>
         </form>
       </div>
+
+      <Footer />
     </div>
   );
 };
