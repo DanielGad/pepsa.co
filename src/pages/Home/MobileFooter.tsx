@@ -7,12 +7,12 @@ import Twitter from '../../assets/images/twitter.png';
 import Linkedin from '../../assets/images/linkedin.png';
 import Instagram from '../../assets/images/instagram.png';
 import PepsaLogoWhite from '../../assets/images/pepsa_logo_white_img.png';
-// import AppStore from '../../assets/images/App_Store.png';
 
 const MobileFooter: React.FC = () => {
   return (
     <footer className="bg-black text-white py-10 px-5" role="contentinfo">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        
         {/* About Section */}
         <div className="space-y-5">
           <img src={PepsaLogoWhite} alt="Pepsa white logo" className="w-1/2 max-w-[120px]" />

@@ -95,7 +95,6 @@ const MobileHeader = () => {
         ))}
       </Swiper>
 
-      {/* Custom styles for Swiper pagination */}
       <style>{`
         .mobile-header-swiper .swiper-pagination-bullet {
           background: rgba(255,255,255,0.5);

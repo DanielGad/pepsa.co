@@ -47,7 +47,6 @@ const Career = () => {
       <ApplicationForm />
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   )

@@ -32,7 +32,6 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <Header />
 
-      {/* Hero Section */}
       <section className={`bg-white text-black py-12 sm:py-14 md:py-18 lg:py-14 text-3xl sm:text-4xl md:text-5xl lg:text-5xl w-[95%] sm:w-[90%] md:w-[80%] text-center mx-auto font-bold tracking-tight leading-snug fade-in-up`}>
         Custom Solutions for Sale, Purchase and <br /> On-demand Delivery 
       </section>
@@ -77,7 +76,6 @@ const Home = () => {
             key={card.title}
             className={`${card.bg} rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-10 shadow-lg px-4 sm:px-6 md:px-10 sm:py-8 md:py-0 relative overflow-hidden`}
           >
-            {/* Text Section */}
             <div className="max-w-[90vw] sm:max-w-md py-3 sm:py-6 flex-1">
               <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 max-w-[400px] md:max-w-[500px] fade-in-left`}>
                 {card.title}
@@ -92,7 +90,6 @@ const Home = () => {
               </button>
             </div>
 
-            {/* Image wrapper aligned to far right & sticking out */}
             <div
               className={`relative flex-shrink-0 ${card.title === "Pepsa Dispatch" ? "absolute top-15 right-[-40px] -mt-20" : ""}`}
               style={{ alignSelf: "flex-end" }}
@@ -153,7 +150,7 @@ const Home = () => {
       {/* More Info & Partners */}
       <section className="bg-white px-2 sm:px-6 md:px-20 py-10 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-center items-center gap-6 sm:gap-10">
-          {/* Left Text */}
+          
           <div className="w-full md:w-auto md:max-w-md text-center md:text-left flex-1 mb-6 md:mb-0">
             <img src={PepsaLogo} alt="Pepsa Logo" className="w-70 mx-auto md:mx-0 mb-2 fade-in-up" />
             <p className="text-[#a50707] mb-2 sm:mb-6 font-bold text-lg sm:text-2xl">
@@ -168,7 +165,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          {/* Right Circle Image */}
+
           <div className="w-full md:w-auto md:max-w-md flex justify-center flex-1">
             <div className="bg-[#a50707] rounded-full flex items-center justify-center w-78 h-78 ">
               <img
