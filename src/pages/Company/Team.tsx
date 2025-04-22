@@ -87,7 +87,7 @@ const Team = () => {
   </div>
 
   {/* Team Section */}
-  <div className="py-16 px-6 sm:px-10 bg-white">
+  <div className="py-16 px-6 sm:px-10 w-[80%] mx-auto">
     <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Meet The Team</h2>
     <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto fade-in-up">
       {teamMembers.map((member, index) => (

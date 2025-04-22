@@ -5,7 +5,7 @@ import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import AboutUs from './pages/Company/AboutUs'
 import Team from './pages/Company/Team'
-// import Career from './pages/Company/Career'
+import Career from './pages/Company/Career'
 // import Store from './pages/Products/Store'
 // import Plug from './pages/Products/Plug'
 // import Dispatch from './pages/Products/Dispatch'
@@ -39,8 +39,8 @@ const App = () => {
         <Route path="/" element={isMobile ? <MobileHome /> : <Home />} />
         <Route path="/about-us" element={<AboutUs />} /> 
         <Route path="/team" element={<Team />} />
-        {/* <Route path="/career" element={<Career />} />
-        <Route path="/store" element={<Store />} />
+        <Route path="/career" element={<Career />} />
+        {/* <Route path="/store" element={<Store />} />
         <Route path="/plug" element={<Plug />} />
         <Route path="/dispatch" element={<Dispatch />} />
         <Route path="/blogs" element={<Blogs />} />
