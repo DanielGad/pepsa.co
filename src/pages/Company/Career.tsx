@@ -15,7 +15,7 @@ const Career = () => {
       }, []);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 overflow-x-hidden">
       <div className="header-container text-center text-white pb-10 h-150 blur-in">
         <p className='text-sm '>PEPSA SOLUTIONS LTD</p>
         <h2 className='text-4xl font-bold mt-5 fade-in-left'>Join Our Team in Building Commerce Ecosystem</h2>

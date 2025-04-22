@@ -72,7 +72,7 @@ const Team = () => {
   return (
     <div>
   {/* Hero Section */}
-  <div className="mt-20 bg-[#a00000] text-white py-10 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between gap-10 blur-in">
+  <div className="mt-20 bg-[#a00000] text-white py-10 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between gap-10 blur-in overflow-x-hidden">
     <div className="fade-in-left w-full md:w-1/2">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-6">Let’s Build the Future Together</h1>
       <p className="mt-2 text-sm md:text-md max-w-md text-left">

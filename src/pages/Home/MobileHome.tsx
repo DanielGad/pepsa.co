@@ -50,7 +50,7 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
   }, []);
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <MobileHeader />
 
       <section className="fade-in-up py-12 text-3xl w-[80%] text-center mx-auto font-bold tracking-tight leading-snug">
