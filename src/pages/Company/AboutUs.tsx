@@ -86,7 +86,7 @@ const AboutUs = () => {
     <>
       <section className="mt-5 overflow-x-hidden">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-30 gap-10 ">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-30 gap-10 blur-in ">
           <div className="max-w-2xl text-left fade-in-up">
             <h1 className="text-4xl font-bold mb-4">About Us</h1>
             <p className="text-lg mb-8 font-light max-w-md">
