@@ -186,7 +186,7 @@ export default function ApplicationForm() {
           </div>
         </div>
 
-        <div className="mb-6 text-sm text-gray-600 w-[400px] text-center mx-auto">
+        <div className="mb-6 text-sm text-gray-600 w-[80%] text-center mx-auto">
           <p>By submitting, you consent to the collection and secure storage of your data for this application, in line with our privacy policy.</p>
         </div>
 
