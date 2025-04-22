@@ -62,14 +62,6 @@ const MobileFooter: React.FC = () => {
               <img src={Subscribe} alt="Subscribe" className="h-9" />
             </button>
           </form>
-          {/* <div className='flex gap-4 mt-4'>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-10" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={AppStore} alt="App Store" className="h-10 cursor-pointer" />
-            </a>
-          </div> */}
         </div>
       </div>
 
@@ -79,10 +71,10 @@ const MobileFooter: React.FC = () => {
           <span className="text-sm">© 2024 Pepsa.co</span>
         </div>
         <div className="flex space-x-4">
-          <a href="#" aria-label="WhatsApp" className="hover:opacity-55 transition"><img src={WhatsApp} alt="WhatsApp" className="h-8" /></a>
-          <a href="#" aria-label="Facebook" className="hover:opacity-55 transition"><img src={Facebook} alt="Facebook" className="h-8" /></a>
-          <a href="#" aria-label="Instagram" className="hover:opacity-55 transition"><img src={Instagram} alt="Instagram" className="h-8" /></a>
-          <a href="#" aria-label="Twitter" className="hover:opacity-55 transition"><img src={Twitter} alt="Twitter" className="h-8" /></a>
+          <a href="https://wa.me/2348133475224" aria-label="WhatsApp" className="hover:opacity-55 transition"><img src={WhatsApp} alt="WhatsApp" className="h-8" /></a>
+          <a href="https://www.facebook.com/pepsa.co" aria-label="Facebook" className="hover:opacity-55 transition"><img src={Facebook} alt="Facebook" className="h-8" /></a>
+          <a href="https://www.instagram.com/pepsa.co/" aria-label="Instagram" className="hover:opacity-55 transition"><img src={Instagram} alt="Instagram" className="h-8" /></a>
+          <a href="https://www.linkedin.com/company/pepsaco" aria-label="Twitter" className="hover:opacity-55 transition"><img src={Twitter} alt="Twitter" className="h-8" /></a>
           <a href="#" aria-label="LinkedIn" className="hover:opacity-55 transition"><img src={Linkedin} alt="LinkedIn" className="h-8" /></a>
         </div>
       </div>

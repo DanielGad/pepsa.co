@@ -20,11 +20,10 @@ import { useEffect } from 'react';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
 
 const AboutUs = () => {
+  useEffect(() => {
+    revealOnScroll();
+  }, []);
 
-    useEffect(() => {
-      revealOnScroll();
-    }, []);
-    
   const carouselImages = [AboutImage1, AboutImage2, AboutImage3, AboutImage4];
 
   const carouselItems = [
@@ -85,9 +84,9 @@ const AboutUs = () => {
 
   return (
     <>
-      <section className="mt-5">
+      <section className="mt-5 overflow-x-hidden">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-30 gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-20 gap-10">
           <div className="max-w-2xl text-left fade-in-up">
             <h1 className="text-4xl font-bold mb-4">About Us</h1>
             <p className="text-lg mb-8 font-light max-w-md">
@@ -95,7 +94,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="w-[400px] mt-10 zoom-in">
+          <div className="w-full max-w-[400px] mt-10 zoom-in">
             <Swiper
               modules={[Autoplay, Pagination]}
               slidesPerView={1}
@@ -108,7 +107,8 @@ const AboutUs = () => {
                   <img
                     src={img}
                     alt={`About slide ${i + 1}`}
-                    className="w-full h-auto rounded-2xl object-contain" />
+                    className="w-full h-auto rounded-2xl object-contain"
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -116,16 +116,18 @@ const AboutUs = () => {
         </div>
 
         {/* Strategic Framework Section */}
-        <div className="flex flex-col lg:flex-row justify-between p-6 px-30">
-          <div className="lg:w-1/2 slide-in-bottom">
-            <h2 className="text-4xl font-semibold mb-4 text-center mt-30 ">Our Strategic <br /> Framework</h2>
+        <div className="flex flex-col lg:flex-row justify-between p-6 md:px-20 gap-10">
+          <div className="lg:w-1/2 slide-in-bottom text-center lg:text-left">
+            <h2 className="text-4xl font-semibold mb-4 mt-10 lg:mt-30">
+              Our Strategic <br /> Framework
+            </h2>
           </div>
 
           <div className="lg:w-1/2 space-y-4 overflow-y-auto max-h-[400px] pr-2 fade-in-left">
             {carouselItems.map((item, index) => (
               <div
                 key={index}
-                className="relative h-80 w-auto rounded-md overflow-hidden shadow-md flex items-end p-4 text-white zoom-in"
+                className="relative h-80 w-full rounded-md overflow-hidden shadow-md flex items-end p-4 text-white zoom-in"
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: 'cover',
@@ -136,7 +138,7 @@ const AboutUs = () => {
               >
                 <div className="z-10 w-full">
                   <h3 className="text-sm uppercase text-white absolute top-5">{item.title}</h3>
-                  <div className='bg-[#151616a8] rounded-md p-2 w-full'>
+                  <div className="bg-[#151616a8] rounded-md p-2 w-full">
                     <p className="text-lg font-semibold">{item.subtitle}</p>
                     <p className="text-sm text-white mt-3">{item.description}</p>
                   </div>
@@ -151,23 +153,25 @@ const AboutUs = () => {
           <h3 className="text-4xl font-bold text-center mb-10">The Values that Define Us</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => (
-              <div key={index} className="flex items-start space-x-4 px-8">
-                <div className='scale-up'>
-                  <img src={value.icon} alt={value.title} className="w-15 h-15 object-contain mb-3" />
-                  <h4 className="font-bold text-xl mb-2">{value.title}</h4>
-                  <p className="text-sm">{value.text}</p>
-                </div>
+              <div key={index} className="flex flex-col items-start space-y-3 px-4">
+                <img src={value.icon} alt={value.title} className="w-14 h-14 object-contain mb-1" />
+                <h4 className="font-bold text-xl">{value.title}</h4>
+                <p className="text-sm">{value.text}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Ready to Partner */}
-        <div className='bg-[#f5f5f5] py-16 px-6 text-center justify-center items-center'>
-          <div className='bg-[#fef7f8] rounded-md py-18 shadow-md w-[80%] mx-auto drop-in scale-up'>
-            <h3 className='text-2xl font-bold mb-4'>Ready to partners with us at Pepsa?</h3>
-            <p className='text-lg mb-6 w-[50%] mx-auto'>Together, we can build a future where commerce is simpler, more accessible, and truly empowering for everyone.</p>
-            <button className='bg-[#a50707] text-white py-2 px-6 rounded-md cursor-pointer'>Get In-Touch</button>
+        <div className="bg-[#f5f5f5] py-16 px-6 text-center">
+          <div className="bg-[#fef7f8] rounded-md py-12 shadow-md w-full max-w-3xl mx-auto drop-in scale-up">
+            <h3 className="text-2xl font-bold mb-4">Ready to partner with us at Pepsa?</h3>
+            <p className="text-lg mb-6 w-full md:w-2/3 mx-auto">
+              Together, we can build a future where commerce is simpler, more accessible, and truly empowering for everyone.
+            </p>
+            <button className="bg-[#a50707] text-white py-2 px-6 rounded-md cursor-pointer">
+              Get In-Touch
+            </button>
           </div>
         </div>
       </section>
