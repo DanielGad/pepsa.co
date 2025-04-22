@@ -80,11 +80,11 @@ const Footer: React.FC = () => {
           <span className="text-sm">© 2024 Pepsa.co</span>
         </div>
         <div className="flex space-x-4">
-          <a href="#" aria-label="WhatsApp" className="hover:opacity-55 transition"><img src={WhatsApp} alt="WhatsApp" className="h-8" /></a>
-          <a href="#" aria-label="Facebook" className="hover:opacity-55 transition"><img src={Facebook} alt="Facebook" className="h-8" /></a>
-          <a href="#" aria-label="Instagram" className="hover:opacity-55 transition"><img src={Instagram} alt="Instagram" className="h-8" /></a>
-          <a href="#" aria-label="Twitter" className="hover:opacity-55 transition"><img src={Twitter} alt="Twitter" className="h-8" /></a>
-          <a href="#" aria-label="LinkedIn" className="hover:opacity-55 transition"><img src={Linkedin} alt="LinkedIn" className="h-8" /></a>
+          <a href="https://wa.me/2348133475224" target="_blank" aria-label="WhatsApp" className="hover:opacity-55 transition"><img src={WhatsApp} alt="WhatsApp" className="h-8" /></a>
+          <a href="https://www.facebook.com/pepsa.co" target="_blank" aria-label="Facebook" className="hover:opacity-55 transition"><img src={Facebook} alt="Facebook" className="h-8" /></a>
+          <a href="https://www.instagram.com/pepsa.co/" target="_blank" aria-label="Instagram" className="hover:opacity-55 transition"><img src={Instagram} alt="Instagram" className="h-8" /></a>
+          <a href="https://x.com/pepsaCo_" target="_blank" aria-label="Twitter" className="hover:opacity-55 transition"><img src={Twitter} alt="Twitter" className="h-8" /></a>
+          <a href="https://www.linkedin.com/company/pepsaco" target="_blank" aria-label="LinkedIn" className="hover:opacity-55 transition"><img src={Linkedin} alt="LinkedIn" className="h-8" /></a>
         </div>
       </div>
     </footer>

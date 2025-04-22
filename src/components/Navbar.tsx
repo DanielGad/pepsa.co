@@ -28,8 +28,8 @@ const dropdownMenus: DropdownItem[] = [
     label: 'Products',
     items: [
       { label: 'Pepsa Store', link: '/store' },
-      { label: 'Pepsa Plug', link: '/plug' },
-      { label: 'Pepsa Dispatch', link: '/dispatch' },
+      { label: 'Pepsa Plug', link: 'https://plug.pepsa.co/' },
+      { label: 'Pepsa Dispatch', link: 'https://dispatch.pepsa.co/' },
     ],
   },
   {
@@ -198,7 +198,7 @@ const Navbar = () => {
 
         {/* Desktop Get Started Button */}
         <div className="hidden lg:block">
-          <Link to="/get-started">
+          <Link to="https://pepsa.co/get-started">
             <button className="bg-[rgb(165,22,27)] text-white px-8 py-3 rounded-[25px] text-sm border border-transparent hover:bg-white hover:text-[rgb(63,40,59)] hover:border-[rgb(165,22,27)] transition-all duration-200 cursor-pointer shadow">
               Get Started
             </button>
@@ -270,7 +270,7 @@ const Navbar = () => {
                 <Link to="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link>
               </li>
               <li>
-                <Link to="/get-started" onClick={() => setMobileOpen(false)}>
+                <Link to="https://pepsa.co/get-started" onClick={() => setMobileOpen(false)}>
                   <button className="w-full text-center bg-[rgb(165,22,27)] text-white px-4 py-3 rounded-[25px] text-base border border-transparent hover:bg-white hover:text-[rgb(63,40,59)] hover:border-[rgb(165,22,27)] transition-all duration-200 cursor-pointer shadow">
                     Get Started
                   </button>
