@@ -86,7 +86,7 @@ const AboutUs = () => {
     <>
       <section className="mt-5 overflow-x-hidden">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-20 gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-30 gap-10 ">
           <div className="max-w-2xl text-left fade-in-up">
             <h1 className="text-4xl font-bold mb-4">About Us</h1>
             <p className="text-lg mb-8 font-light max-w-md">
@@ -116,7 +116,7 @@ const AboutUs = () => {
         </div>
 
         {/* Strategic Framework Section */}
-        <div className="flex flex-col lg:flex-row justify-between p-6 md:px-20 gap-10">
+        <div className="flex flex-col lg:flex-row justify-between p-6 md:px-30 gap-10">
           <div className="lg:w-1/2 slide-in-bottom text-center lg:text-left">
             <h2 className="text-4xl font-semibold mb-4 mt-10 lg:mt-30">
               Our Strategic <br /> Framework
@@ -149,7 +149,7 @@ const AboutUs = () => {
         </div>
 
         {/* Values Section */}
-        <div className="bg-red-800 text-white py-16 px-6 fade-in-right">
+        <div className="bg-red-800 text-white py-16 px-10 fade-in-right">
           <h3 className="text-4xl font-bold text-center mb-10">The Values that Define Us</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => (
