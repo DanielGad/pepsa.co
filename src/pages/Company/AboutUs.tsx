@@ -18,6 +18,7 @@ import Integrity from '../../assets/images/arcticons_play-integrity-api-checker.
 import Footer from '../Home/Footer';
 import { useEffect } from 'react';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   useEffect(() => {
@@ -169,9 +170,11 @@ const AboutUs = () => {
             <p className="text-lg mb-6 w-full md:w-2/3 mx-auto">
               Together, we can build a future where commerce is simpler, more accessible, and truly empowering for everyone.
             </p>
+            <Link to="/contact" rel="noopener noreferrer">
             <button className="bg-[#a50707] text-white py-2 px-6 rounded-md cursor-pointer">
               Get In-Touch
             </button>
+            </Link>
           </div>
         </div>
       </section>

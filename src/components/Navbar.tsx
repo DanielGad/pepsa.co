@@ -34,8 +34,8 @@ const dropdownMenus: DropdownItem[] = [
   {
     label: 'Resources',
     items: [
-      { label: 'News/Blog', link: '/blogs' },
-      { label: 'How it works', link: '/how-it-works' },
+      { label: 'News/Blog', link: '/' },
+      { label: 'How it works', link: '/' },
     ],
   },
 ];

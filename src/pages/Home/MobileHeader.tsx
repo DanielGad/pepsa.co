@@ -5,6 +5,7 @@ import Image from '../../assets/images/Image_01.png';
 import Image2 from '../../assets/images/Image_02.png';
 import Image3 from '../../assets/images/Image_03.png';
 import Image4 from '../../assets/images/Image_04.png';
+import { Link } from 'react-router-dom';
 
 const MobileHeader = () => {
   return (
@@ -24,7 +25,9 @@ const MobileHeader = () => {
             text: "The Marketplace for shopping and on-demand delivery services within your city!",
             img: Image,
             btn1: "Shop Now",
-            btn2: "Send Item"
+            btn2: "Send Item",
+            link1: "/",
+            link2: "/"
           },
           {
             title: "Operate a Logistics Business with Pepsa Dispatch",
@@ -32,7 +35,9 @@ const MobileHeader = () => {
             text: "Start a last-mile logistics business. Onboard riders, get delivery orders, and track drivers activities. Increase earnings with our gigs and simultaneously fulfil your orders.",
             img: Image2,
             btn1: "Register Now",
-            btn2: <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10 zoom-in" />
+            btn2: <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10 zoom-in" />,
+            link1: "https://pepsa.co/get-started",
+            link2: "/"
           },
           {
             title: "Unlock Your Business Growth with All-in-One Tool",
@@ -40,7 +45,9 @@ const MobileHeader = () => {
             text: "Get a free e-commerce page, business management tool, bank account, flexible payment gateway, quick access to customers, and fast delivery on Plug.",
             img: Image3,
             btn1: "Plug-in Now",
-            btn2: "Learn About Plug"
+            btn2: "Learn About Plug",
+            link1: "https://plug.pepsa.co/",
+            link2: "https://plug.pepsa.co/",
           },
           {
             title: "Buy and get fast delivery, access payment solution and pay bills",
@@ -48,7 +55,9 @@ const MobileHeader = () => {
             text: "Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.",
             img: Image4,
             btn1: "Shop Now",
-            btn2: "Send Item"
+            btn2: "Send Item",
+            link1: "/",
+            link2: "/"
           }
         ].map((slide, index) => (
           <SwiperSlide key={index}>
@@ -79,17 +88,29 @@ const MobileHeader = () => {
               </div>
 
               <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center mb-6 zoom-in">
-                <button className="text-sm sm:text-base bg-white text-[#a2151b] hover:bg-[#a2151b] hover:text-white border hover:border-white font-semibold px-20 py-3 cursor-pointer rounded-lg transition-colors">
+              {/* Button 1 */}
+              <Link to={slide.link1} rel="noopener noreferrer">
+                <button className="w-[200px] h-[48px] text-sm sm:text-base bg-white text-[#a2151b] hover:bg-[#a2151b] hover:text-white border hover:border-white font-semibold py-3 px-4 cursor-pointer rounded-lg transition-colors flex items-center justify-center">
                   {slide.btn1}
                 </button>
-                {typeof slide.btn2 === 'string' ? (
-                  <button className="text-sm sm:text-base border-white text-white font-semibold px-20 py-3 cursor-pointer rounded-lg transition-colors border hover:bg-white hover:text-[#a2151b]">
+              </Link>
+
+              {/* Button 2 */}
+              {typeof slide.btn2 === 'string' ? (
+                <Link to={slide.link2} rel="noopener noreferrer">
+                  <button className="w-[200px] h-[48px] text-sm sm:text-base border-white text-white font-semibold py-3 px-4 cursor-pointer rounded-lg transition-colors border hover:bg-white hover:text-[#a2151b] flex items-center justify-center">
                     {slide.btn2}
                   </button>
-                ) : (
-                  slide.btn2
-                )}
-              </div>
+                </Link>
+              ) : (
+                <Link to={slide.link2} rel="noopener noreferrer">
+                  <div className="w-[200px] h-[48px]  rounded-lg cursor-pointer transition-colors flex items-center justify-center">
+                    {slide.btn2}
+                  </div>
+                </Link>
+              )}
+            </div>
+
             </div>
           </SwiperSlide>
         ))}

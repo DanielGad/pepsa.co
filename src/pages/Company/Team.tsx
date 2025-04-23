@@ -13,6 +13,7 @@ import JoinUs from "../../assets/images/Join_us.png";
 import Footer from '../Home/Footer';
 import { useEffect } from 'react';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
+import { Link } from 'react-router-dom';
 
 
 const teamMembers = [
@@ -111,9 +112,11 @@ const Team = () => {
       <p className="mb-6 text-white max-w-sm">
         Discover how you can make an impact and build a meaningful career with us.
       </p>
+      <Link to="/contact" rel="noopener noreferrer">
       <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md border hover:bg-[#a00000] hover:text-white transition duration-300">
         Contact Now
       </button>
+      </Link>
     </div>
     <img
       src={JoinUs}

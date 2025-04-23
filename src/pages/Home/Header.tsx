@@ -9,6 +9,7 @@ import trusted1 from '../../assets/images/trusted_01.png';
 import trusted2 from '../../assets/images/trusted_02.png';
 import trusted3 from '../../assets/images/trusted_03.png';
 import trusted4 from '../../assets/images/trusted_04.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -32,12 +33,16 @@ const Header = () => {
                 The Marketplace for shopping and on-demand delivery services within your city!
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
+                <Link to="/">
                 <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] border hover:border-1 hover:text-white hover:border-white transition">
                   Shop Now
                 </button>
+                </Link>
+                <Link to="/">
                 <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#a00000]  transition cursor-pointer ">
                   Send Item
                 </button>
+                </Link>
               </div>
               <div className="text-sm text-center md:text-left fade-in-up">
                 <p className="text-[rgb(163,149,255)] text-lg sm:text-[20px] font-semibold mb-1">Trusted by Leading Brands</p>
@@ -77,9 +82,11 @@ const Header = () => {
                 Pepsa Dispatch connects logistics vendors to thousands of daily delivery orders, ensuring steady income, rider tracking, and flexible revenue sharing across cities.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
+              <Link to="https://pepsa.co/get-started" rel="noopener noreferrer">
                 <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white border hover:border-1  transition">
                   Register Now
                 </button>
+                </Link>
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8 sm:h-12" />
                 </a>
@@ -113,12 +120,16 @@ const Header = () => {
                 Digitise your business with our management tool, payment system, quick access to customers, and fast delivery on Plug.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
+                <Link to={"https://plug.pepsa.co/"} rel="noopener noreferrer">
                 <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white hover:border-[white] border hover:border-1 transition">
                   Plug-in Now
                 </button>
+                </Link>
+                <Link to={"https://plug.pepsa.co/"} rel="noopener noreferrer">
                 <button className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#a00000] transition cursor-pointer ">
                   Learn About Plug
                 </button>
+                </Link>
               </div>
             </div>
             <div className="flex justify-center md:justify-start fade-in-right">
@@ -148,9 +159,11 @@ const Header = () => {
                 Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
+                <Link to="https://pepsa.co/get-started" rel="noopener noreferrer">
                 <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white hover:border-[white] border hover:border-1 transition">
                   Get Started
                 </button>
+                </Link>
               </div>
             </div>
             <div className="flex justify-center md:justify-start fade-in-bottom">

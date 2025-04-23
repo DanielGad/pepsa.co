@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { revealOnScroll } from "../../lib/ScrollAnimation";
 import CountUp from 'react-countup'; 
 import { useInView } from 'react-intersection-observer';
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -47,7 +48,8 @@ const Home = () => {
             btnColor: "bg-white text-[#a00000]",
             btnHover: "hover:bg-[#a00000] hover:text-white",
             btnBorder: "border",
-            btnText: "Shop Now"
+            btnText: "Shop Now",
+            link: '/'
           },
           {
             bg: "bg-[#fcecec] text-[#a00000]",
@@ -58,7 +60,8 @@ const Home = () => {
             btnColor: "bg-[#a00000] text-white",
             btnHover: "hover:bg-white hover:text-[#a00000] hover:border-[#a00000]",
             btnBorder: "border",
-            btnText: "Plug-In-Now"
+            btnText: "Plug-In-Now",
+            link: 'https://plug.pepsa.co/'
           },
           {
             bg: "bg-[#E2DEFE] text-[#a00000]",
@@ -69,7 +72,8 @@ const Home = () => {
             btnColor: "bg-white text-[#a00000]",
             btnHover: "hover:bg-[#a00000] hover:text-white",
             btnBorder: "border",
-            btnText: "Shop Now"
+            btnText: "Shop Now",
+            link: 'https://dispatch.pepsa.co/'
           }
         ].map((card) => (
           <div
@@ -83,11 +87,13 @@ const Home = () => {
               <p className={`mb-4 sm:mb-6 md:mb-8 leading-relaxed text-base sm:text-lg fade-in-right`}>
                 {card.text}
               </p>
+              <Link to={card.link} rel="noopener noreferrer">
               <button
                 className={`${card.btnColor} ${card.btnBorder} ${card.btnHover} font-semibold px-4 py-2 rounded-md transform transition-transform duration-900 ease-in-out hover:scale-110 hover:brightness-110 cursor-pointer`}
               >
                 {card.btnText}
               </button>
+              </Link>
             </div>
 
             <div
@@ -139,11 +145,11 @@ const Home = () => {
             </div>
             <div>
               <p className="mb-2 font-medium text-2xl">Join Pepsa.co Today</p>
-              <a href="/about-us" target="_blank" rel="noopener noreferrer">
+              <Link to="/about-us">
               <button className="bg-white text-[#a50707] px-4 sm:px-6 py-2 rounded-2xl hover:bg-[#a50707] hover:text-white border-2 transition cursor-pointer drop-in">
                 Know More
               </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

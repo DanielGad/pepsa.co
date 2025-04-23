@@ -17,6 +17,7 @@ import { Autoplay } from 'swiper/modules';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer'; 
+import { Link } from 'react-router-dom';
 
 
 const MobileHome: React.FC = () => {
@@ -66,9 +67,11 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
         <p className="w-[95%] justify-center mx-auto">
           Discover and order from your favourite local vendors, plugs, and stores. Enjoy hassle-free shopping and last-mile delivery of everyday items.
         </p>
+        <Link to="/" rel="noopener noreferrer">
         <button className="cursor-pointer bg-[#a00000] text-white mt-3 hover:bg-white hover:text-[#a00000] border px-10 py-2 rounded-2xl mb-3">
           Shop Now
         </button>
+        </Link>
       </div>
 
       {/* Sell on Plug */}
@@ -80,9 +83,11 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
         <p className="w-[95%] justify-center mx-auto">
           Get everything to manage and grow your business on Plug. Free e-commerce page, access to delivery, business bank account and manage inventories, sales, orders, and customers
         </p>
+        <Link to="https://plug.pepsa.co/" rel="noopener noreferrer">
         <button className="cursor-pointer bg-[#a00000] text-white mt-3 hover:bg-white hover:text-[#a00000] border px-10 py-2 rounded-2xl mb-3">
           Plug-in Now
         </button>
+        </Link>
       </div>
 
       {/* Dispatch */}
@@ -94,9 +99,11 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
         <p className="w-[95%] justify-center mx-auto">
           Start a logistics business. Onboard riders, get delivery orders, and track drivers activities. Increase earnings with our gigs and simultaneously fulfil your orders.
         </p>
+        <Link to="https://dispatch.pepsa.co/" rel="noopener noreferrer">
         <button className="cursor-pointer bg-[#a00000] text-white mt-3 hover:bg-white hover:text-[#a00000] border px-10 py-2 rounded-2xl mb-3">
           Register Now
         </button>
+        </Link>
       </div>
 
       {/* About Us */}
@@ -121,9 +128,11 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
             <p>Transactions</p>
           </div>
         <h1 className="font-bold mt-10 text-3xl mx-auto">Join Pepsa.co Today</h1>
+        <Link to="/about-us" rel="noopener noreferrer">
         <button className="cursor-pointer bg-white border text-black mt-5 hover:bg-[#a00000] hover:text-white px-10 py-2 rounded-2xl mb-15">
           Know more
         </button>
+        </Link>
       </section>
 
       {/* App Section */}
