@@ -139,9 +139,11 @@ const Home = () => {
             </div>
             <div>
               <p className="mb-2 font-medium text-2xl">Join Pepsa.co Today</p>
+              <a href="/about-us" target="_blank" rel="noopener noreferrer">
               <button className="bg-white text-[#a50707] px-4 sm:px-6 py-2 rounded-2xl hover:bg-[#a50707] hover:text-white border-2 transition cursor-pointer drop-in">
                 Know More
               </button>
+              </a>
             </div>
           </div>
         </div>
