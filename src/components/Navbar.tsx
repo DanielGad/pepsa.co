@@ -27,7 +27,6 @@ const dropdownMenus: DropdownItem[] = [
   {
     label: 'Products',
     items: [
-      { label: 'Pepsa Store', link: '/store' },
       { label: 'Pepsa Plug', link: 'https://plug.pepsa.co/' },
       { label: 'Pepsa Dispatch', link: 'https://dispatch.pepsa.co/' },
     ],

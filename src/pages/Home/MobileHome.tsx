@@ -71,10 +71,10 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
         </button>
       </div>
 
-      {/* Sell with Plug */}
+      {/* Sell on Plug */}
       <div className="zoom-in flex flex-row gap-4 items-center justify-end bg-[#fbe7ea] rounded-2xl text-[#a00000] pl-5 pt-5 w-[80%] mx-auto">
-        <div className="font-bold text-3xl mr-4 max-w-xs">Sell with Plug</div>
-        <img src={SellImg} alt="Sell with Plug" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
+        <div className="font-bold text-3xl mr-4 max-w-xs">Sell on Plug</div>
+        <img src={SellImg} alt="Sell on Plug" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
       </div>
       <div className="fade-in-up flex flex-col gap-4 items-start bg-[#f3f7fa] rounded-2xl text-black font-medium mt-4 pl-5 pt-5 w-[80%] mx-auto mb-5">
         <p className="w-[95%] justify-center mx-auto">
@@ -87,7 +87,7 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
 
       {/* Dispatch */}
       <div className="zoom-in flex flex-row gap-4 items-center justify-end bg-[#e2defe] rounded-2xl text-[#a00000] pl-5 pt-5 w-[80%] mx-auto">
-        <div className="font-bold text-3xl mr-4 max-w-xs">Pepsa Dispatch</div>
+        <div className="font-bold text-3xl mr-[-10px] max-w-xs">Pepsa Dispatch</div>
         <img src={Dispatch} alt="Pepsa Dispatch" className="w-2/5 min-w-[150px] max-w-[300px] object-contain" />
       </div>
       <div className="fade-in-up flex flex-col gap-4 items-start bg-[#f3f7fa] rounded-2xl text-black font-medium mt-4 pl-5 pt-5 w-[80%] mx-auto mb-15">
@@ -107,7 +107,7 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
           We are a people-centric technology company committed to developing innovative solutions that make life and commerce engagement easier, with customers’ preferences in mind.
         </p>
         <div ref={usersRef}>
-            <h1 className='text-4xl text-[#64ccc5] mb-1 font-bold'>
+            <h1 className='text-4xl text-[rgb(163,149,255)] mb-1 font-bold'>
               {usersInView ? <CountUp end={3000} duration={2} separator="," /> : '0'}+
             </h1>
             <p>Active Users</p>
@@ -115,12 +115,12 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
 
           {/* Transactions */}
           <div ref={txRef}>
-            <h1 className='text-4xl text-[#64ccc5] mt-8 mb-1 font-bold'>
+            <h1 className='text-4xl text-[rgb(163,149,255)] mt-8 mb-1 font-bold'>
               {txInView ? <CountUp end={350000} duration={3} separator="," /> : '0'}+
             </h1>
             <p>Transactions</p>
           </div>
-        <h1 className="font-bold mt-10 text-4xl">Join Pepsa.co Today</h1>
+        <h1 className="font-bold mt-10 text-3xl mx-auto">Join Pepsa.co Today</h1>
         <button className="cursor-pointer bg-white border text-black mt-5 hover:bg-[#a00000] hover:text-white px-10 py-2 rounded-2xl mb-15">
           Know more
         </button>

@@ -6,8 +6,8 @@ import Manager from "../../assets/images/Agbonde_Akintunde.png";
 import Ops from "../../assets/images/Opeyemi_Ogunseye.png";
 import Data from "../../assets/images/Uchenna_Emmanuel.png";
 import Member1 from "../../assets/images/Olagoke_Olorunosebi.png";
-import Member2 from "../../assets/images/Blessing_Oyeleke.png";
-import Member3 from "../../assets/images/Mobolaji_Akinola.png";
+import Member2 from "../../assets/images/Blessing.png";
+import Member3 from "../../assets/images/Mobolaji.png";
 import TeamLogo from "../../assets/images/Team.png";
 import JoinUs from "../../assets/images/Join_us.png";
 import Footer from '../Home/Footer';
@@ -19,48 +19,56 @@ const teamMembers = [
   {
     name: 'Adekunde OLOYEDE',
     role: 'Founder/CEO',
-    image: CEO
+    image: CEO,
+    link: 'https://www.linkedin.com/in/oloyedeinsight'
   },
   {
     name: 'Daniel ORIRE',
     role: 'CTO',
     image: CTO,
-    highlight: true,
+    link: ''
   },
   {
     name: 'Adebayo OLOYEDE',
     role: 'Senior Engineer',
     image: Senior,
+    link: 'https://www.linkedin.com/in/adebayo-oloyede'
   },
   {
     name: 'Opeyemi OGUNESEYE',
     role: 'Operations',
     image: Ops,
+    link: 'https://www.linkedin.com/in/opeyemi-ogunseye-a8059810a'
   },
   {
     name: 'Uchenna EMMANUEL',
     role: 'Data Team Lead & Engineer',
     image: Data,
+    link: 'https://www.linkedin.com/in/uchenna-ogbonna-mba-95744521'
   },
   {
     name: 'Agbodone AKINTUNDE',
     role: 'Project IT Manager',
     image: Manager,
+    link: 'https://www.linkedin.com/in/akintunde-agbonde-577718133/'
   },
   {
     name: 'Olagoke OLORUNOSEBI',
     role: 'Team Member',
     image: Member1,
+    link: 'https://www.linkedin.com/in/olagoke-olorunkosebi-9ba48571/'
   },
   {
     name: 'Blessing OYELEKE',
     role: 'Team Member',
     image: Member2,
+    link: 'https://www.linkedin.com/in/oyelekeblessing/'
   },
   {
     name: 'Mobalaji AKINOLA',
     role: 'Team Member',
     image: Member3,
+    link: 'https://www.linkedin.com/in/mobolaji-akinola'
   },
 ];
 
@@ -89,7 +97,7 @@ const Team = () => {
   {/* Team Section */}
   <div className="py-16 px-6 sm:px-10 w-[80%] mx-auto">
     <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Meet The Team</h2>
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto fade-in-up">
+    <div className="grid gap-y-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto ">
       {teamMembers.map((member, index) => (
         <TeamCard key={index} {...member} />
       ))}

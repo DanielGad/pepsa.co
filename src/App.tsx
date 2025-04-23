@@ -10,7 +10,6 @@ import Navbar from './components/Navbar'
 import AboutUs from './pages/Company/AboutUs'
 import Team from './pages/Company/Team'
 import Career from './pages/Company/Career'
-// import Store from './pages/Products/Store'
 // import Blogs from './pages/Resources/Blogs'
 // import HowItWorks from './pages/Resources/HowItWorks'
 
@@ -40,8 +39,8 @@ const App = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/store" element={<Store />} />
-        <Route path="/blogs" element={<Blogs />} />
+
+        {/* <Route path="/blogs" element={<Blogs />} />
         <Route path="/how-it-works" element={<HowItWorks />} /> */}
 
         {/* Catch-all for 404 */}

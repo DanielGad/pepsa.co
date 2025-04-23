@@ -25,7 +25,7 @@ const Header = () => {
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-up">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
                 Everyday Needs and<br /> Delivery to Your Doorstep
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
@@ -40,7 +40,7 @@ const Header = () => {
                 </button>
               </div>
               <div className="text-sm text-center md:text-left fade-in-up">
-                <p className="text-cyan-300 text-lg sm:text-[20px] font-semibold mb-1">Trusted by Leading Brands</p>
+                <p className="text-[rgb(163,149,255)] text-lg sm:text-[20px] font-semibold mb-1">Trusted by Leading Brands</p>
                 <div className="flex flex-wrap justify-center md:justify-start items-center mt-1 gap-2 sm:gap-4">
                   <img src={trusted1} alt="trusted 1" className="h-8 sm:h-12 md:h-10 w-auto" />
                   <img src={trusted2} alt="trusted 2" className="h-8 sm:h-12 md:h-10 w-auto" />
@@ -70,7 +70,7 @@ const Header = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-left">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Delivery Business Made Easy</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
                 Operate a logistics business <br /> with Pepsa Dispatch
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
@@ -106,7 +106,7 @@ const Header = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-right">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Best Delivery Tools for Vendors</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
                 Unlock your business growth<br /> with our Plug All-in-One tool
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
@@ -141,7 +141,7 @@ const Header = () => {
         <SwiperSlide>
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-bottom">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
                 Buy and get fastdelivery,<br /> access payment solution <br /> and pay bills
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
