@@ -26,7 +26,7 @@ const teamMembers = [
     name: 'Daniel ORIRE',
     role: 'CTO',
     image: CTO,
-    link: ''
+    link: 'https://www.linkedin.com/in/daniel-orire-4b9a4b5a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
   },
   {
     name: 'Adebayo OLOYEDE',
