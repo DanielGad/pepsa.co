@@ -54,7 +54,7 @@ const { ref: txRef, inView: txInView } = useInView({ triggerOnce: false });
       <MobileHeader />
 
       <section className="fade-in-up py-12 text-3xl w-[80%] text-center mx-auto font-bold tracking-tight leading-snug">
-        Custom Solutions for Sale, Purchase and On-demand Delivery 
+        Custom Solutions for Sales, Purchase and On-demand Delivery 
       </section>
 
       {/* Buy with Pepsa */}
