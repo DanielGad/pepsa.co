@@ -97,7 +97,7 @@ const Team = () => {
   {/* Team Section */}
   <div className="py-16 px-6 sm:px-10 w-[80%] mx-auto">
     <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Meet The Team</h2>
-    <div className="grid gap-y-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto ">
+    <div className="grid gap-y-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto fade-in-up">
       {teamMembers.map((member, index) => (
         <TeamCard key={index} {...member} />
       ))}
