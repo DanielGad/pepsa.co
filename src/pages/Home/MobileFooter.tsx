@@ -68,7 +68,7 @@ const MobileFooter: React.FC = () => {
       {/* Bottom Section */}
       <div className="max-w-6xl mx-auto mt-20 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
         <div className="flex space-x-4 mb-4 md:mb-0">
-          <span className="text-sm">© 2024 Pepsa.co</span>
+          <span className="text-sm">© {new Date().getFullYear()} Pepsa.co</span>
         </div>
         <div className="flex space-x-4">
           <a href="https://wa.me/2348133475224" aria-label="WhatsApp" className="hover:opacity-55 transition"><img src={WhatsApp} alt="WhatsApp" className="h-8" /></a>

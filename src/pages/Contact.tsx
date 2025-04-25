@@ -1,4 +1,4 @@
-import TeamLogo from "../assets/images/Team.png";
+import TeamLogo from "../assets/images/shout-out.png";
 import WhatsApp from '../assets/images/whatsapp-red.png';
 import Twitter from '../assets/images/twitter-red.png';
 import Linkedin from '../assets/images/linkedin-red.png';
@@ -50,11 +50,11 @@ const Contact = () => {
     <div>
       <div className="header-container bg-[#a00000] text-white py-10 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between gap-10 blur-in overflow-x-hidden">
         <div className="fade-in-left w-full md:w-1/2">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-6">Get In Touch With Us</h1>
-          <p className="mt-2 text-md md:text-md max-w-md text-left">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">Get In Touch With Us</h1>
+          <p className="mt-2 text-md md:text-md text-center">
             Your experience is our priority, and we are here to assist you promptly and thoroughly.
           </p>
-          <div className='flex justify-left items-center gap-4 rotate-in mt-10'>
+          <div className='flex justify-center items-center  gap-4 rotate-in mt-10'>
             <a href="https://wa.me/2348133475224" target="_blank" aria-label="WhatsApp" className="hover:opacity-55 transition">
               <img src={WhatsApp} alt="Social Media" className='w-10 h-10 cursor-pointer'/>
             </a>

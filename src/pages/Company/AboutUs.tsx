@@ -87,10 +87,10 @@ const AboutUs = () => {
     <>
       <section className="mt-5 overflow-x-hidden">
         {/* Header */}
-        <div className="header-container flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-20 px-6 md:px-30 gap-10 blur-in ">
-          <div className="max-w-2xl text-left fade-in-up">
+        <div className="header-container flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-10 px-6 md:px-30 gap-10 blur-in ">
+          <div className="max-w-2xl text-center lg:text-left fade-in-up">
             <h1 className="text-4xl font-bold mb-4">About Us</h1>
-            <p className="text-lg mb-8 font-light max-w-md">
+            <p className="text-lg lg:mb-8 font-light max-w-md">
               We are a people-centric technology company, committed to developing innovative solutions that make life and commerce engagement easier, with customers’ preferences in mind.
             </p>
           </div>
@@ -149,19 +149,52 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Values Section */}
-        <div className="bg-red-800 text-white py-16 px-10 fade-in-right">
-          <h3 className="text-4xl font-bold text-center mb-10">The Values that Define Us</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div key={index} className="flex flex-col items-start space-y-3 px-4">
-                <img src={value.icon} alt={value.title} className="w-14 h-14 object-contain mb-1" />
-                <h4 className="font-bold text-xl">{value.title}</h4>
-                <p className="text-sm">{value.text}</p>
-              </div>
-            ))}
-          </div>
+      {/* Values Section for Large Screens (Grid Layout) */}
+      <div className="bg-red-800 text-white py-16 px-10 fade-in-right hidden lg:block">
+        <h3 className="text-4xl font-bold text-center mb-10">The Values that Define Us</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {values.map((value, index) => (
+            <div key={index} className="flex flex-col items-start space-y-3 px-4">
+              <img src={value.icon} alt={value.title} className="w-14 h-14 object-contain mb-1" />
+              <h4 className="font-bold text-xl">{value.title}</h4>
+              <p className="text-sm">{value.text}</p>
+            </div>
+          ))}
         </div>
+      </div>
+
+    {/* Values Section for Small & Medium Screens (Swiper) */}
+      <div className="bg-red-800 text-white py-16 px-10 fade-in-right lg:hidden">
+        <h3 className="text-4xl font-bold text-center mb-10">The Values that Define Us</h3>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1}
+          loop
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          className="w-full"
+        >
+          {values.map((value, index) => (
+            <SwiperSlide key={index}>
+              <div className="w-full flex flex-col items-center text-center space-y-4 px-4 py-3">
+                <img src={value.icon} alt={value.title} className="w-20 h-20 object-contain mb-2" />
+                <h4 className="font-bold text-2xl">{value.title}</h4>
+                <p className="text-md text-white/90 max-w-xl">{value.text}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <style>{`
+          .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.5);
+          }
+          .swiper-pagination-bullet-active {
+            background: white;
+          }
+        `}</style>
+      </div>
+
 
         {/* Ready to Partner */}
         <div className="bg-[#f5f5f5] py-16 px-6 text-center">

@@ -15,7 +15,6 @@ import { useEffect } from 'react';
 import { revealOnScroll } from '../../lib/ScrollAnimation';
 import { Link } from 'react-router-dom';
 
-
 const teamMembers = [
   {
     name: 'Adekunde OLOYEDE',
@@ -27,7 +26,7 @@ const teamMembers = [
     name: 'Daniel ORIRE',
     role: 'CTO',
     image: CTO,
-    link: 'https://www.linkedin.com/in/daniel-orire-4b9a4b5a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+    link: 'https://www.linkedin.com/in/daniel-orire-4b9a4b5a'
   },
   {
     name: 'Adebayo OLOYEDE',
@@ -74,60 +73,51 @@ const teamMembers = [
 ];
 
 const Team = () => {
-    useEffect(() => {
-      revealOnScroll();
-    }, []);
-    
+  useEffect(() => {
+    revealOnScroll();
+  }, []);
+
   return (
     <div>
-  {/* Hero Section */}
-  <div className="header-container bg-[#a00000] text-white py-10 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between gap-10 blur-in overflow-x-hidden">
-    <div className="fade-in-left w-full md:w-1/2">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-6">Let’s Build the Future Together</h1>
-      <p className="mt-2 text-sm md:text-md max-w-md text-left">
-        As we build ecosystems for businesses, join in shaping the future of commerce, one innovation at a time.
-      </p>
+      {/* Header Section */}
+      <div className="header-container bg-[#a00000] text-white py-10 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between gap-10 blur-in overflow-x-hidden">
+        <div className="fade-in-left w-full md:w-1/2">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left mb-6">Let’s Build the Future Together</h1>
+          <p className="mt-2 text-sm md:text-md max-w-md text-center lg:text-left">
+            As we build ecosystems for businesses, join in shaping the future of commerce, one innovation at a time.
+          </p>
+        </div>
+        <img src={TeamLogo} alt="Team Logo" className="w-full md:w-[300px] fade-in-right" />
+      </div>
+
+      {/* Team Section */}
+      <div className="py-16 px-4 sm:px-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Meet The Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 max-w-6xl mx-auto fade-in-up justify-items-center">
+          {teamMembers.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </div>
+      </div>
+
+      {/* Join Us Section */}
+      <div className="bg-[#a00000] rounded-xl flex flex-col lg:flex-row p-6 lg:p-10 text-center justify-center items-center mx-4 md:mx-20 lg:mx-40 mb-20 gap-6">
+        <div className="text-left fade-in-left">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-white font-bold mb-4">Ready to Join Us?</h3>
+          <p className="mb-6 text-white max-w-sm">
+            Discover how you can make an impact and build a meaningful career with us.
+          </p>
+          <Link to="/contact">
+            <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md border hover:bg-[#a00000] hover:text-white transition duration-300">
+              Contact Now
+            </button>
+          </Link>
+        </div>
+        <img src={JoinUs} alt="Join us" className="w-full max-w-xs fade-in-right" />
+      </div>
+
+      <Footer />
     </div>
-    <img
-      src={TeamLogo}
-      alt="Team Logo"
-      className="w-full md:w-[300px] fade-in-right"
-    />
-  </div>
-
-  {/* Team Section */}
-  <div className="py-16 px-6 sm:px-10 w-[80%] mx-auto">
-    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Meet The Team</h2>
-    <div className="grid gap-y-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto fade-in-up">
-      {teamMembers.map((member, index) => (
-        <TeamCard key={index} {...member} />
-      ))}
-    </div>
-  </div>
-
-  {/* Join Us */}
-  <div className="bg-[#a00000] rounded-xl flex flex-col lg:flex-row p-6 lg:p-10 text-center justify-center items-center mx-4 md:mx-20 lg:mx-40 mb-20 gap-6">
-    <div className="text-left fade-in-left">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl text-white font-bold mb-4">Ready to Join Us?</h3>
-      <p className="mb-6 text-white max-w-sm">
-        Discover how you can make an impact and build a meaningful career with us.
-      </p>
-      <Link to="/contact" rel="noopener noreferrer">
-      <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md border hover:bg-[#a00000] hover:text-white transition duration-300">
-        Contact Now
-      </button>
-      </Link>
-    </div>
-    <img
-      src={JoinUs}
-      alt="Join us"
-      className="w-full max-w-xs fade-in-right"
-    />
-  </div>
-
-  <Footer />
-</div>
-
   );
 };
 
