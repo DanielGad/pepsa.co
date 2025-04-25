@@ -34,7 +34,7 @@ const Home = () => {
       <Header />
 
       <section className={`bg-white text-black py-12 sm:py-14 md:py-18 lg:py-14 text-3xl sm:text-4xl md:text-5xl lg:text-5xl w-[95%] sm:w-[90%] md:w-[80%] text-center mx-auto font-bold tracking-tight leading-snug fade-in-up`}>
-        Custom Solutions for Sale, Purchase and <br /> On-demand Delivery 
+        Custom Solutions for Sales, Purchase and <br /> On-demand Delivery 
       </section>
 
       {/* Services Section */}
@@ -56,7 +56,7 @@ const Home = () => {
             img: SellImg,
             alt: "Sell on Plug illustration",
             title: "Sell on Plug",
-            text: `Get everything to manage and grow your business on Plug. Free e-commerce page, access to delivery, bank account, manage inventories, sales, orders, and customers.`,
+            text: `GGet everything to manage and grow your business on Plug. Free e-commerce page, access to delivery, business bank account and manage  inventories, sales, orders, and customers.`,
             btnColor: "bg-[#a00000] text-white",
             btnHover: "hover:bg-white hover:text-[#a00000] hover:border-[#a00000]",
             btnBorder: "border",
@@ -68,7 +68,7 @@ const Home = () => {
             img: Dispatch,
             alt: "Pepsa Dispatch illustration",
             title: "Pepsa Dispatch",
-            text: `Discover and order from your favourite local vendors, plugs, and stores. Enjoy hassle-free shopping and last-mile delivery of everyday items.`,
+            text: `Start a logistics business. Onboard riders, get delivery orders, and track drivers activities. Increase earnings with our gigs and simultaneously fulfil your orders.`,
             btnColor: "bg-white text-[#a00000]",
             btnHover: "hover:bg-[#a00000] hover:text-white",
             btnBorder: "border",
@@ -126,8 +126,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 fade-in-right">About us</h2>
             <p className="mb-4 sm:mb-6 max-w-xs sm:max-w-sm md:max-w-[350px] fade-in-up">
-              We are a people-centric technology company committed to developing innovative
-              solutions that make life and commerce engagement easier, with customers’ preferences in mind.
+            We are a people-centric technology company committed to developing innovative solutions that make life and commerce engagement easier, with customers’ preferences in mind.
             </p>
             <div className="flex gap-6 justify-center font-bold mb-6 text-3xl" >
               <div ref={usersRef}>

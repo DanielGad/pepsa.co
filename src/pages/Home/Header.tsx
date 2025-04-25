@@ -27,10 +27,10 @@ const Header = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-up">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
-                Everyday Needs and<br /> Delivery to Your Doorstep
+              Everyday Needs and <br /> Delivery to Your Doorstep
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
-                The Marketplace for shopping and on-demand delivery services within your city!
+              The Marketplace for shopping and on-demand delivery services within your city!
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
                 <Link to="/">
@@ -76,11 +76,10 @@ const Header = () => {
             <div className="text-center md:text-left md:ml-14 fade-in-left">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Delivery Business Made Easy</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
-                Operate a logistics business <br /> with Pepsa Dispatch
+              Operate a logistics business <br /> with Pepsa Dispatch
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
-                Pepsa Dispatch connects logistics vendors to thousands of daily delivery orders, ensuring steady income, rider tracking, and flexible revenue sharing across cities.
-              </p>
+              Pepsa Dispatch connects logistics vendors to thousands of daily delivery orders, ensuring steady income, rider tracking, and flexible revenue sharing across cities.</p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
               <Link to="https://pepsa.co/get-started" rel="noopener noreferrer">
                 <button className="bg-white text-[#a00000] font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-[#a00000] hover:text-white border hover:border-1  transition">
@@ -114,10 +113,10 @@ const Header = () => {
             <div className="text-center md:text-left md:ml-14 fade-in-right">
               <p className="text-xs sm:text-sm uppercase mb-2 sm:mb-4 opacity-80">Best Delivery Tools for Vendors</p>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
-                Unlock your business growth<br /> with our Plug All-in-One tool
+              Unlock your business growth <br /> with our Plug All-in-One tool
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
-                Digitise your business with our management tool, payment system, quick access to customers, and fast delivery on Plug.
+              Digitise your business with our management tool, payment system, quick access to customers, and fast delivery on Plug.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6 sm:mb-12">
                 <Link to={"https://plug.pepsa.co/"} rel="noopener noreferrer">
@@ -153,7 +152,7 @@ const Header = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="text-center md:text-left md:ml-14 fade-in-bottom">
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-[#e5edcd]">
-                Buy and get fastdelivery,<br /> access payment solution <br /> and pay bills
+              Buy and get fast delivery, <br />access payment solution <br />and pay bills.
               </h1>
               <p className="text-base sm:text-lg mb-4 sm:mb-8 text-white/90 max-w-xs sm:max-w-md md:max-w-lg mx-auto md:mx-0">
                 Discover and order from your preferred vendors, plugs, and stores. Enjoy hassle-free buying and last-mile delivery of everyday items.
