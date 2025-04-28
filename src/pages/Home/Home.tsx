@@ -56,7 +56,7 @@ const Home = () => {
             img: SellImg,
             alt: "Sell on Plug illustration",
             title: "Sell on Plug",
-            text: `GGet everything to manage and grow your business on Plug. Free e-commerce page, access to delivery, business bank account and manage  inventories, sales, orders, and customers.`,
+            text: `Get everything to manage and grow your business on Plug. Free e-commerce page, access to delivery, business bank account and manage  inventories, sales, orders, and customers.`,
             btnColor: "bg-[#a00000] text-white",
             btnHover: "hover:bg-white hover:text-[#a00000] hover:border-[#a00000]",
             btnBorder: "border",

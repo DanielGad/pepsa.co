@@ -87,15 +87,15 @@ const AboutUs = () => {
     <>
       <section className="mt-5 overflow-x-hidden">
         {/* Header */}
-        <div className="header-container flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-10 px-6 md:px-30 gap-10 blur-in ">
-          <div className="max-w-2xl text-center lg:text-left fade-in-up">
-            <h1 className="text-4xl font-bold mb-4">About Us</h1>
-            <p className="text-lg lg:mb-8 font-light max-w-md">
+        <div className="header-container flex flex-col md:flex-row items-center justify-between bg-[#a50707] text-white py-5 px-6 md:px-30 gap-10 blur-in ">
+          <div className="max-w-2xl text-center lg:text-left fade-in-up lg:pl-10">
+            <h1 className="text-5xl font-bold mb-4">About Us</h1>
+            <p className="text-2xl lg:mb-8 font-light max-w-md">
               We are a people-centric technology company, committed to developing innovative solutions that make life and commerce engagement easier, with customers’ preferences in mind.
             </p>
           </div>
 
-          <div className="w-full max-w-[400px] mt-10 zoom-in">
+          <div className="w-full max-w-[500px] zoom-in lg:pr-10">
             <Swiper
               modules={[Autoplay, Pagination]}
               slidesPerView={1}
@@ -119,7 +119,7 @@ const AboutUs = () => {
         {/* Strategic Framework Section */}
         <div className="flex flex-col lg:flex-row justify-between p-6 md:px-30 gap-10">
           <div className="lg:w-1/2 slide-in-bottom text-center lg:text-left">
-            <h2 className="text-4xl font-semibold mb-4 mt-10 lg:mt-30">
+            <h2 className="text-4xl font-semibold mb-4 mt-10 lg:mt-30 lg:pl-20">
               Our Strategic <br /> Framework
             </h2>
           </div>

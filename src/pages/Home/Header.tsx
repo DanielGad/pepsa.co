@@ -181,6 +181,13 @@ const Header = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <style>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #e5edcd;
+          opacity: 0.3;
+        }
+      `}</style>
     </section>
   );
 };
