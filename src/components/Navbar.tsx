@@ -197,11 +197,15 @@ const Navbar = () => {
 
         {/* Desktop Get Started Button */}
         <div className="hidden lg:block">
-          <Link to="https://pepsa.co/get-started">
-            <button className="bg-[rgb(165,22,27)] text-white px-8 py-3 rounded-[25px] text-sm border border-transparent hover:bg-white hover:text-[rgb(63,40,59)] hover:border-[rgb(165,22,27)] transition-all duration-200 cursor-pointer shadow">
-              Get Started
-            </button>
-          </Link>
+          {/* Desktop link - hidden on mobile */}
+            <Link 
+              to="https://mobile.pepsa.co" 
+              className="hidden md:block" // Hide on mobile
+            >
+              <button className="bg-[rgb(165,22,27)] text-white px-8 py-3 rounded-[25px] text-sm border border-transparent hover:bg-white hover:text-[rgb(63,40,59)] hover:border-[rgb(165,22,27)] transition-all duration-200 cursor-pointer shadow">
+                Get Started
+              </button>
+            </Link>
         </div>
       </div>
 

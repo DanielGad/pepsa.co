@@ -10,8 +10,6 @@ import Navbar from './components/Navbar'
 import AboutUs from './pages/Company/AboutUs'
 import Team from './pages/Company/Team'
 import Career from './pages/Company/Career'
-// import Blogs from './pages/Resources/Blogs'
-// import HowItWorks from './pages/Resources/HowItWorks'
 
 
 const App = () => {
